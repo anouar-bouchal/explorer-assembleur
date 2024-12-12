@@ -1,0 +1,37 @@
+************************************
+*       TRI DE NOMBRES
+*       $0001= Nombre
+*       $0002 = Première valeur
+************************************
+INIT:
+;$0001 DB $06    *  [0001]=$06 Nbre de valeurs              *
+;$0002 DB $2a
+;$0003 DB $B5 
+;$0004 DB $60
+;$0005 DB $3F
+;$0006 DB $D1
+;$0007 DB $19
+tri:
+   ldu #$0100
+   lda #$01 ; indicateur à 1
+   sta $0000
+    lda $0001 ; Nbre de valeurs
+    deca        
+    ldx #$0002   ; Pointer sur le premier caractère
+passe:
+    tfr x,y
+    ldb ,x+ ; Mettre le caractère dans B
+    cmpb ,x; Comparer avec la valeur suivante
+   bcc compt  ;SI supérieur aller à Compt   
+   clr $0000  ; SINON indicateur à 0 (signifie qu'il faut ordonner)
+   pshu a   ; Sauver le compteur
+   lda ,x  ;Permuter les valeurs
+   stb ,x
+    sta ,y
+    pulu a  ;récupérer le compteur
+compt:
+   deca       ;décomptage
+   bne passe
+   tst $0000  ;vérifie la valeur de l'indicateur
+   beq tri ;si égal à 0 recommencer le tri
+end

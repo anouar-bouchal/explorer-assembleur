@@ -1,0 +1,10 @@
+Le circuit U1 est un 74LS688
+U2 peut ‚galement ˆtre remplac‚ par un PALCE 16V8. Ce circuit doit ˆtre 
+programm‚ avec le fichier JEDEC ci joint.
+Pour U4 il est n‚essaire de prendre un 68B21 cadenc‚ … 2MHz au lieu du
+ 6821 dont la vitesse n peut d‚passer 1MHz.
+
+Un soin trŠs particulier doit ˆtre port‚ aux soudures et … la r‚alisation
+du circuit imprim‚ pour ‚viter tout court-circuit au niveau du slot du PC.
+Les cartes ou ‚l‚ments ult‚rieurement connect‚s … cette carte d'interface 
+seront de pr‚f‚rence opto-coupl‚es.

@@ -1,0 +1,27 @@
+Utilisez la commande Fichier/Nouveau pour créer un nouveau programme assembleur
+Utilisez la commande Fichier/Ouvrir pour ouvrir un programme assembleur existant.
+Vous pouvez simuler en arrière (jusqu'à 10 instructions) en utilisant la commande Simulation/Défaire  ou en cliquant sur le bouton Défaire.
+La fonction de chacune des commandes ou de chaque bouton figurant dans les différentes fenêtres du simulateur est décrite dans la partie inférieure de la fenêtre principale.
+Vous pouvez changer la valeur d'un registre en double cliquant sur sa valeur actuelle et en saisissant une nouvelle valeur en hexadécimal.
+Les fenêtres RAM et ROM affichent dans la colonne de droite le code ASCII correspondant à la valeur en mémoire.
+Vous pouvez remettre à zéro le compteur de cycle en double-cliquant sur la zone CYCLE de la fenêtre principale.
+Vous pouvez recharger le dernier fichier utilisé par le simulateur en le choisissant au bas du menu Fichier.
+Vous pouvez indenter automatiquement vos lignes de programme dans l'éditeur en validant la case INDENTATION AUTOMATIQUE dans la fenêtre de configuration (Options/Configuration).
+Vous pouvez modifier le contenu d'une case mémoire RAM en cours de simulation, par un simple double clic sur la cellule mémoire de la fenêtre RAM.
+La fenêtre ROM contient les codes hexadécimaux des instructions du programme aux adresses correspondantes du programme.
+Vous pouvez faire apparaître ou disparaître des fenêtres en utilisant les commandes Fenêtre/RAM, Fenêtre/ROM, etc...
+Vous pouvez provoquer la fermeture automatique de l'éditeur après mise à jour, en validant la commande correspondante dans la fenêtre de configuration (Options/Configuration).
+Vous pouvez voir l'état de la mémoire de votre ordinateur grâce à la fenêtre d'information (Outils/Information).
+Vous pouvez définir un vecteur d'interruption IRQ en affectant l'octet de poids faible de l'adresse du sous-programme, à l'adresse $FFF9 (;$FFF9 DB $LL) et l'octet de poids fort à l'adresse $FFF8 (;$FFF8 DB $HH)
+Vous pouvez définir un vecteur d'interruption FIRQ en affectant l'octet de poids faible de l'adresse du sous-programme, à l'adresse $FFF7 (;$FFF7 DB $LL) et l'octet de poids fort à l'adresse $FFF6 (;$FFF7 DB $HH)
+Vous pouvez définir un vecteur d'interruption NMI en affectant l'octet de poids faible de l'adresse du sous-programme, à l'adresse $FFFD (;$FFFD DB $LL) et l'octet de poids fort à l'adresse $FFFC (;$FFFC DB $HH)
+L'adresse d'origine d'un programme est définie par la première pseudo commande ORG rencontrée dans le programme. Exemple : ORG $4000
+Vous pouvez placer un point d'arrêt dans le programme par un simple double clic sur une ligne d'instruction dans la fenêtre programme.
+Vous pouvez réorganiser automatiquement les fenêtres avec la commande Fenêtre/Arranger
+L'analyse de la syntaxe de votre programme peut-être arrêtée dès la première erreur si la case correspondante est cochée dans la fenêtre de configuration (Options/Configuration).
+Il existe une texte caché dans la fenêtre A propos, accessible en maintenant les touches Alt et Ctrl appuyées et en double cliquant sur l'image de cette fenêtre.
+Chacun des trois éléments de la fenêtre PIA peut être retiré de la fenêtre de manière à se transformer en fenêtre flottante indépendante
+La configuration du PIA peut se faire directement à partir du menu système de la fenêtre PIA  
+En positionnant la souris sur le registre CC, le contenu de celui-ci est affiché en hexadécimal dans la barre d'état
+La pseudo-instruction EQU permet de simplifier la lecture du programme dans la fenêtre d'édition.
+

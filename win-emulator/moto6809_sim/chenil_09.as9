@@ -1,0 +1,28 @@
+debut:
+*Chenillard
+CRA EQU $8001
+DDRA EQU $8000
+ORA EQU $8000
+CRB EQU $8003
+ORB EQU $8002
+DDRB EQU $8002
+INIT_PortA:
+    lda #$ff
+    clr CRA
+    sta DDRA
+    sta CRA   
+Init_PortB:
+   clr CRB 
+    sta DDRB
+    sta CRB   
+DEBUT:
+   lda #$80
+   ldb #$01
+BOUCLE:
+   STA ORA
+   STB ORB
+   lslb
+   lsra 
+   bcc boucle
+   bra debut
+end

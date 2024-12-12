@@ -1,0 +1,60 @@
+**********************************************
+ *Programme de com entre un 6821     *
+* et une imprimante                                    *
+*Lors de la demande d'interruption      *
+*de la part de l'imprimante  via la         *
+*ligne CA1, le 6809 envoi un mot sur    *
+*le port A                                                        *
+*Le mot commence en $0000                *
+*et se termine par Ctrl Z ($1A)                *
+********************************************
+* CA1 déclenche une interruption IRQ *
+
+* BRAUN Norbert (C) 1998
+* Définition du mot
+;$0000 DB $43
+;$0001 DB $4F
+;$0002 DB $55
+;$0003 DB $43
+;$0004 DB $4F
+;$0005 DB $55
+;$0006 DB $1A 
+;$FFF8 DB $FD
+;$FFF9 DB $00 
+ORG $FC00 
+    LDA #$50 ;inhibe les IT
+   TFR A,CC
+   LDS #$0400 ;init Pile
+   CLR $8001
+   lda #$FF
+   STA $8000  ;A en sortie
+   LDA #%00000101 ;CA1->IRQ
+   STA $8001
+   LDA #$20
+   TFR A,CC ;autorise les IT
+   LDX #$0000
+   STX $0100 
+Attente:
+  nop
+  nop
+  nop
+  bra attente
+  swi
+*sprg d'interruption   
+ORG $FD00   
+ spIT:
+   LDX $0100
+    Lda ,X+
+   StX $0100
+       CMPA #$1A
+    BEQ FINprg
+    STA $8000
+    lda $8000 ;CRA7=0
+    bra finIT
+  finprg:
+  ldy #$fc23
+  sty $03FE 
+ finIT:
+    RTI 
+       end
+ 

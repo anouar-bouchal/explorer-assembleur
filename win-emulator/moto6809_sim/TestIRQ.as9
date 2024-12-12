@@ -1,0 +1,21 @@
+* teste l'exécution
+* d'un prg d'IT
+;$0000 db $00
+;$FFF8 db $FD
+;$FFF9 db $00
+org $FC00
+lds #$0300
+debut:
+ lda #$00
+ tfr a,dp
+ lda $0050
+ ldx #$0000
+attend:
+  nop
+  bra attend
+ swi
+org $FD00
+prgIT:
+   inc $0000
+   rti
+ end

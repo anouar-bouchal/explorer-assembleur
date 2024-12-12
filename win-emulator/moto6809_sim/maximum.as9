@@ -1,0 +1,24 @@
+*cherche maximum
+*liste des données
+;$0001 db $05
+;$0002 db $67
+;$0003 db $79
+;$0004 db $15
+;$0005 db $e3
+;$0006 db $72
+NOMBRE EQU $0001
+DebutNbr EQU $0002
+prgpal:
+  ldb Nombre
+  clr $0000
+  clra
+  ldx #DEBUTNbr
+maxm:
+  lda ,x+
+  cmpa $0000
+  bcs nochg
+ sta $0000
+nochg:
+ decb
+  bne maxm
+end

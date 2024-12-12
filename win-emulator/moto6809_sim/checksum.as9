@@ -1,0 +1,25 @@
+*---------------------------------------------
+*            CHECKSUM
+*Calcul de l'octet de vérification
+*par OU Exclusif
+*---------------------------------------------
+;$0000 db $53
+;$0001 db $45
+;$0002 db $54
+;$0040 db $00
+;$0041 db $00
+;$0042 db $03
+Nombre EQU $0042
+AdListe EQU $0040
+Debut: 
+   ldx AdListe
+  LDB Nombre
+   DecB
+   LDA ,X+
+Boucle:
+   EORA ,X+
+   DecB
+   BNE Boucle
+   STA $0043 
+END
+ 

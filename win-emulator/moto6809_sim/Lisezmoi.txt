@@ -1,0 +1,58 @@
+BIENVENUE DANS MOTO6809 
+-----------------------
+version 3.1 (WIN95 32 bits)
+
+Ce logiciel est un simulateur du microprocesseur EF6809 et de son périphérique parallèle (PIA) EF6821 de la société MOTOROLA.
+
+Il offre toutes les fonctionalités permettant un apprentissage rapide de la programmation assembleur à moindre frais.
+Son environnement convivial en fait un outil pédagogique de premier plan. De nombreux enseignants, étudiants, ou passionnés d'électronique ont apprécié les versions précédentes.
+
+Les nouvelles fonctionalités de la version 3.1:
+-Gestion de la pseudo-instruction EQU
+
+-Affichage du code du registre CC en hexa dans la barre d'état
+
+-correction d'un bug sur l'instruction LEAX
+
+Les fonctionalités des versions précédentes:
+
+-Barre d'état et bulles info expliquant la fonction de chaque commande
+
+-Modification des contenus des registres
+
+-Paramétrage de l'impression (choix de la police, de l'orientation, impression des adresses, des codes des instructions de la configuration
+
+-Espace mémoire configurable de 1Ko à 32 Koctets pour la ROM et de 1ko à 8ko pour la RAM
+
+-Configuration simplifiée avec une mise en évidence des conflits 
+
+-Visualisation des codes machines dans la ROM
+
+-visualisation des contenus mémoire sous forme ASCII
+
+-Adressage immédiat en binaire accepté
+
+-Amélioration de l'affichage dans l'éditeur (commentaires en bleu et étiquettes en gras
+
+-Accès direct à l'aide d'une instruction
+
+-Gestion complète du PIA (mode poignée de main, etc...)
+
+-gestion d'une carte d'interface pouvant être intégrée au PC
+
+-etc...
+
+
+Pour obtenir la clé de déverrouillage du logiciel, il suffit de me faire parvenir le reçu d'un don d'une somme supérieure à 200FF. Le reçu doit dater de moins de 2 mois et doit être établi par une association humanitaire.
+
+CE LOGICIEL ET LES FICHIERS QUI L’ACCOMPAGNENT SONT LIVRES TELS QUELS. L’ AUTEUR NE PEUT EN AUCUN CAS ETRE TENU RESPONSABLE DES EVENTUELS DOMMAGES CAUSES PAR L’UTILISATION DU LOGICIEL. 
+
+
+BRAUN Norbert
+20, rue SCHWEITZER
+68890 REGUISHEIM
+
+Mises à jour gratuites sur le site INTERNET : http://members.aol.com/braunnor/index.htm
+
+
+
